@@ -1,0 +1,54 @@
+ {
+ 	"name": "awx-automation-linux",
+	"description": "",
+	"priority": 2,
+	"amazonAccountId": "64c7e117-7a0a-41ff-91f8-543d1d551c85",
+
+	"backupType": "SelectedItems",
+	"snapshotSettings": {
+		"additionalTags": [],
+		"copyTagsFromVolumeEnabled": false,
+		"tryCreateVSSSnapshot": false
+	},
+	"backupSettings": {
+		"targetRepositoryId": "1d418aec-5008-4f4b-ac20-bfc260b4aa80"
+	},
+	"regionIds": ["8df5e189-6620-4e1d-887d-0a3c32dedc3f"],
+	"selectedItems": {
+		"virtualMachineIds": ["9f95c54d-480d-4720-9156-7d73a44add10"],
+		"tagIds": []
+	},
+	"excludedItems": {
+		"virtualMachineIds": [],
+		"tagIds": []
+	},
+	"scheduleSettings": {
+		"dailyScheduleEnabled": true,
+		"dailySchedule": {
+			"kind": "Everyday",
+			"runsPerHour": 1,
+			"days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+			"snapshotOptions": {
+				"retention": {
+					"count": 4
+				},
+				"schedule": {
+					"hours": [false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+				}
+			},
+			"backupOptions": {
+				"retention": {
+					"type": "Days",
+					"count": 14
+				},
+				"schedule": {
+					"hours": [false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+				}
+			}
+		},
+		"weeklyScheduleEnabled": false,
+		"monthlyScheduleEnabled": false,
+		"yearlyScheduleEnabled": false
+	}
+	
+}

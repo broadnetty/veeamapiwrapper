@@ -1,0 +1,227 @@
+{
+  "name": "awx-automation-linux",
+  "description": "",
+  "type": "Ec2",
+  "snapshotSettings": {
+    "additionalTags": [
+      {
+        "key": "mtop_lab",
+        "value": "vba-3.0-resources"
+      },
+      {
+        "key": "mtop_lab",
+        "value": "vba-3.0-resources"
+      }
+    ],
+    "copyTagsFromVolumeEnabled": true,
+    "tryCreateVSSSnapshot": true,
+    "snapshotScripts": {
+      "windowsScripts": {
+        "enabled": true,
+        "preSnapshotScript": "string",
+        "preSnapshotArguments": "string",
+        "postSnapshotScript": "string",
+        "postSnapshotArguments": "string",
+        "runOnlyForBackupSnapshots": true,
+        "ignoreMissingScripts": true,
+        "ignoreScriptErrors": true
+      },
+      "linuxScripts": {
+        "enabled": true,
+        "preSnapshotScript": "string",
+        "preSnapshotArguments": "string",
+        "postSnapshotScript": "string",
+        "postSnapshotArguments": "string",
+        "runOnlyForBackupSnapshots": true,
+        "ignoreMissingScripts": true,
+        "ignoreScriptErrors": true
+      }
+    }
+  },
+  "replicaSettings": {
+    "mapping": [
+      {
+        "sourceRegionId": "3305f138-162c-4e70-807d-f5940825858d",
+        "targetRegionId": "01b81833-7852-43e7-b316-0a1b220356db",
+        "targetAmazonAccountId": "c3aece3d-b300-4548-af0c-10128d8f46dc",
+        "encryptionKey": "string",
+        "encryptOnlyEncryptedVolumes": true
+      }
+    ],
+    "additionalTags": [
+      {
+        "key": "string",
+        "value": "string"
+      }
+    ],
+    "copyTagsFromVolumeEnabled": true
+  },
+  "backupSettings": {
+    "targetRepositoryId": "e5e3201d-c04e-4805-9432-f1a711ddba9f"
+  },
+  "regionIds": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ],
+  "selectedItems": {
+    "virtualMachineIds": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ],
+    "tagIds": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ],
+    "rdsIds": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ]
+  },
+  "excludedItems": {
+    "virtualMachineIds": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ],
+    "volumesIds": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ],
+    "tagIds": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ],
+    "rdsIds": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ]
+  },
+  "scheduleSettings": {
+    "dailyScheduleEnabled": true,
+    "dailySchedule": {
+      "kind": "Everyday",
+      "runsPerHour": 1,
+      "days": [
+        "Sunday"
+      ],
+      "snapshotOptions": {
+        "retention": {
+          "count": 0
+        },
+        "schedule": {
+          "hours": [
+            true
+          ]
+        }
+      },
+      "backupOptions": {
+        "retention": {
+          "type": "Days",
+          "count": 0
+        },
+        "schedule": {
+          "hours": [
+            true
+          ]
+        }
+      },
+      "replicaOptions": {
+        "retention": {
+          "count": 0
+        },
+        "schedule": {
+          "hours": [
+            true
+          ]
+        }
+      }
+    },
+    "weeklyScheduleEnabled": true,
+    "weeklySchedule": {
+      "timeLocal": "2019-08-24T14:15:22Z",
+      "snapshotOptions": {
+        "retention": {
+          "count": 0
+        },
+        "schedule": {
+          "days": [
+            "Sunday"
+          ]
+        }
+      },
+      "backupOptions": {
+        "retention": {
+          "type": "Days",
+          "count": 0
+        },
+        "schedule": {
+          "days": [
+            "Sunday"
+          ]
+        }
+      },
+      "replicaOptions": {
+        "retention": {
+          "count": 0
+        },
+        "schedule": {
+          "days": [
+            "Sunday"
+          ]
+        }
+      }
+    },
+    "monthlyScheduleEnabled": true,
+    "monthlySchedule": {
+      "timeLocal": "2019-08-24T14:15:22Z",
+      "dayNumberInMonth": "First",
+      "dayOfWeek": "Sunday",
+      "dayOfMonth": 0,
+      "snapshotOptions": {
+        "retention": {
+          "count": 0
+        },
+        "schedule": {
+          "months": [
+            "January"
+          ]
+        }
+      },
+      "backupOptions": {
+        "retention": {
+          "type": "Days",
+          "count": 0
+        },
+        "schedule": {
+          "months": [
+            "January"
+          ]
+        }
+      },
+      "replicaOptions": {
+        "retention": {
+          "count": 0
+        },
+        "schedule": {
+          "months": [
+            "January"
+          ]
+        }
+      }
+    },
+    "yearlyScheduleEnabled": true,
+    "yearlySchedule": {
+      "timeLocal": "2019-08-24T14:15:22Z",
+      "dayNumberInMonth": "First",
+      "dayOfWeek": "Sunday",
+      "dayOfMonth": 0,
+      "month": "January",
+      "retention": {
+        "count": 0,
+        "type": "Years"
+      }
+    }
+  },
+  "amazonAccountId": "1a4474e5-d0c4-419f-9a1a-e216c74bf4f0",
+  "retrySettings": {
+    "retryTimes": 0
+  },
+  "policyNotificationSettings": {
+    "recipient": "string",
+    "notifyOnSuccess": true,
+    "notifyOnWarning": true,
+    "notifyOnFailure": true
+  },
+  "backupType": "AllItems"
+}
