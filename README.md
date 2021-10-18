@@ -10,8 +10,8 @@ To enable auto-setup, you need to prepare your base VBA image first:
 
 >#!/bin/bash<br />
 >if [ -f /home/ubuntu/veeam-setup/not_first_run ]; then<br />
->  echo "Starting script.." &> /home/ubuntu/veeam-setup/setup.log<br />
->  cd /home/ubuntu/veeam-setup<br />
+>__echo "Starting script.." &> /home/ubuntu/veeam-setup/setup.log<br />
+>__cd /home/ubuntu/veeam-setup<br />
 >  rm -rf veeamapiwrapper<br />
 >  git clone git@github.com:broadnetty/veeamapiwrapper.git<br />
 >  /usr/bin/python3 veeamapiwrapper/main.py &>> /home/ubuntu/veeam-setup/setup.log<br />
