@@ -8,7 +8,7 @@ To enable auto-setup, you need to prepare your base VBA image first:
 - create a folder /home/ubuntu/veeam-setup
 - create there a file init.sh and put there the following:
 
->#!/bin/bash
+>#!/bin/bash<br />
 >if [ -f /home/ubuntu/veeam-setup/not_first_run ]; then
 >  echo "Starting script.." &> /home/ubuntu/veeam-setup/setup.log
 >  cd /home/ubuntu/veeam-setup
