@@ -8,15 +8,15 @@ To enable auto-setup, you need to prepare your base VBA image first:
 - create a folder /home/ubuntu/veeam-setup
 - create there a file init.sh and put there the following:
 
-#!/bin/bash
-if [ -f /home/ubuntu/veeam-setup/not_first_run ]; then
-  echo "Starting script.." &> /home/ubuntu/veeam-setup/setup.log
-  cd /home/ubuntu/veeam-setup
-  rm -rf veeamapiwrapper
-  git clone git@github.com:broadnetty/veeamapiwrapper.git
-  /usr/bin/python3 veeamapiwrapper/main.py &>> /home/ubuntu/veeam-setup/setup.log
-  touch /home/ubuntu/veeam-setup/not_first_run
-fi
+>#!/bin/bash
+>if [ -f /home/ubuntu/veeam-setup/not_first_run ]; then
+>  echo "Starting script.." &> /home/ubuntu/veeam-setup/setup.log
+>  cd /home/ubuntu/veeam-setup
+>  rm -rf veeamapiwrapper
+>  git clone git@github.com:broadnetty/veeamapiwrapper.git
+>  /usr/bin/python3 veeamapiwrapper/main.py &>> /home/ubuntu/veeam-setup/setup.log
+>  touch /home/ubuntu/veeam-setup/not_first_run
+>fi
 
 The git@github.com:broadnetty/veeamapiwrapper.git is the path to your repository where you forked this repo to.
 You should also replace all entries of 'veeamapiwrapper' in the init.sh with your repository name. 
