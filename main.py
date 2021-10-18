@@ -106,7 +106,7 @@ class VBA:
         return json.loads(str(r.text))
 
 
-vb = VBA('127.0.0.1','11005', os.environ['VBAlogin'], os.environ['VBApass'])
+vb = VBA('18.222.196.145','11005', os.environ['VBAlogin'], os.environ['VBApass'])
 
 #print(vb.rescanFull(vb.getAccounts('Default*')[0]['id'], [vb.getRegions('us-east-2')[0]['id']]))
 #print(vb.getTags('mtop-mo-backup'))
@@ -123,4 +123,4 @@ def addrepo(vb):
     for bucket in vb.getBuckets('mtop-s3-lab'):
         print(vb.addRepository(vb.getAccounts('Default*')[0]['id'], "main-repository-awx-automation", bucket['id'], 'awx-automation'))
 
-#addrepo(vb)
+addrepo(vb)
