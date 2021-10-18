@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import requests, os
 import urllib3, json
 
