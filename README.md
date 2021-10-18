@@ -45,6 +45,6 @@ You should also replace all entries of 'veeamapiwrapper' in the init.sh with you
 - create an AMI from that machine and use this AMI in your terraform templates
 
 The setup script kicks off only by the first boot of the machine. It crates flag file and checks if it exists before doing anything:
->if [ -f /home/ubuntu/veeam-setup/not_first_run ]
+>if [ ! -f /home/ubuntu/veeam-setup/not_first_run ]
 
 If you remove this file manually, the setup will go on the next boot
