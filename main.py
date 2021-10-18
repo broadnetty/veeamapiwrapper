@@ -106,7 +106,7 @@ class VBA:
         return json.loads(str(r.text))
 
 
-vb = VBA('18.222.196.145','11005', os.environ['VBAlogin'], os.environ['VBApass'])
+vb = VBA(os.environ['VBAhost'],'11005', os.environ['VBAlogin'], os.environ['VBApass'])
 
 #print(vb.rescanFull(vb.getAccounts('Default*')[0]['id'], [vb.getRegions('us-east-2')[0]['id']]))
 #print(vb.getTags('mtop-mo-backup'))
