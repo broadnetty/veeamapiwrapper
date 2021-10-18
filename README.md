@@ -31,6 +31,9 @@ You should also replace all entries of 'veeamapiwrapper' in the init.sh with you
 >export VBApass="your password for this user"<br />
 >export VBAhost="127.0.0.1"<br />
 
+- install the follwing packets:
+>sudo apt install python3 python3-requests python3-urllib3
+
 - generate a key for access your repository with (email sohuld be the same as in your account):
 >ssh-keygen -t ed25519 -C "your_email@example.com"
 
