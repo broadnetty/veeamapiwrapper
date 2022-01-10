@@ -121,6 +121,6 @@ def addrepo(vb):
     vb.rescanS3(vb.getAccounts('Default*')[0]['id'])
     print(vb.getBuckets('mtop-s3-lab'))
     for bucket in vb.getBuckets('mtop-s3-lab'):
-        print(vb.addRepository(vb.getAccounts('Default*')[0]['id'], "main-repository-awx-automation", bucket['id'], 'awx-automation'))
+        print(vb.addRepository(vb.getAccounts('main*')[0]['id'], "main-repository-awx-automation", bucket['id'], 'awx-automation'))
 
 addrepo(vb)
